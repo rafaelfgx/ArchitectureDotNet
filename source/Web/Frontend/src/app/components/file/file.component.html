@@ -1,0 +1,11 @@
+<div class="js-upload uk-padding-small uk-padding-remove-left" uk-form-custom>
+    <input type="file" multiple #input [disabled]="disabled" [id]="formControlName" [name]="formControlName" (change)="change(input.files)">
+    <button class="uk-button uk-button-default" type="button" tabindex="-1">Select</button>
+</div>
+
+<div>
+    <ul class="uk-list uk-list-bullet">
+        <li *ngFor="let upload of uploads" class="uk-text-warning">{{ upload.id }}: {{ upload.progress }}%</li>
+        <li *ngFor="let file of value" class="uk-text-success">{{ file.name }}</li>
+    </ul>
+</div>

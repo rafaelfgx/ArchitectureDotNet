@@ -1,0 +1,17 @@
+**/*.bat
+**/*.log
+**/*.md
+**/*.yml
+**/.dockerignore
+**/.editorconfig
+**/.git
+**/.gitattributes
+**/.gitignore
+**/.vs
+**/.vscode
+**/bin
+**/dist
+**/dockerfile
+**/node_modules
+**/obj
+**/package-lock.json

@@ -1,0 +1,7 @@
+<div class="uk-text-center" *ngIf="this.pages > 1">
+    <button class="uk-button uk-button-default uk-button-small" [disabled]="this.page.index <= 1" (click)="this.change(1)">First</button>
+    <button class="uk-button uk-button-default uk-button-small uk-margin-small-left" [disabled]="this.page.index <= 1" (click)="this.change(this.page.index - 1)">Previous</button>
+    <span class="uk-margin-small-left">{{this.page.index}} of {{pages}}</span>
+    <button class="uk-button uk-button-default uk-button-small uk-margin-small-left" [disabled]="this.page.index >= this.pages" (click)="this.change(this.page.index + 1)">Next</button>
+    <button class="uk-button uk-button-default uk-button-small uk-margin-small-left" [disabled]="this.page.index >= this.pages" (click)="this.change(this.pages)">Last</button>
+</div>

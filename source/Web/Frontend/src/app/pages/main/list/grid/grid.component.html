@@ -1,0 +1,29 @@
+<form [formGroup]="filters">
+    <table class="uk-table uk-table-divider uk-table-hover uk-table-small uk-table-striped">
+        <thead>
+            <tr>
+                <th class="uk-text-center@m">
+                    <app-order [order]="grid.parameters.order" property="Id" text="Id" (changed)="load()"></app-order>
+                    <app-input-text class="uk-text-center" formControlName="Id" text="Id"></app-input-text>
+                </th>
+                <th>
+                    <app-order [order]="grid.parameters.order" property="FirstName" text="FirstName" (changed)="load()"></app-order>
+                    <app-input-text formControlName="FirstName" text="FirstName"></app-input-text>
+                </th>
+                <th>
+                    <app-order [order]="grid.parameters.order" property="Email" text="Email" (changed)="load()"></app-order>
+                    <app-input-text formControlName="Email" text="Email"></app-input-text>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of grid.list">
+                <td class="uk-text-center@m">{{ item?.id }}</td>
+                <td>{{ item?.firstName }}</td>
+                <td>{{ item?.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
+<app-pagination [page]="grid.parameters.page" [count]="this.grid.count" (changed)="load()"></app-pagination>

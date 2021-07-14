@@ -1,0 +1,17 @@
+﻿*.bat
+*.log
+*.pdb
+*.suo
+*.tmp
+*.user
+.vs
+[Bb]in
+[Dd]ebug
+[Ll]og
+[Oo]bj
+[Rr]elease
+[Rr]eleases
+[Tt]est[Rr]esults
+dist
+node_modules
+package-lock.json

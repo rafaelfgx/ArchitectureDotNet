@@ -1,0 +1,3 @@
+<a class="uk-link-muted" (click)="click()">{{text}}</a>
+<span *ngIf="order?.property === property && !order?.ascending" uk-icon="icon: arrow-up"></span>
+<span *ngIf="order?.property === property && order?.ascending" uk-icon="icon: arrow-down"></span>

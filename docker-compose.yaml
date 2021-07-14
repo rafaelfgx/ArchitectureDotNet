@@ -1,0 +1,34 @@
+version: "3.7"
+services:
+    web:
+        image: architecture_web
+        container_name: architecture_web
+        restart: always
+        build:
+            context: .
+            dockerfile: dockerfile
+        environment:
+            - ConnectionStrings:Context=Server=architecture_database;Database=Database;User Id=sa;Password=P4ssW0rd!;
+        depends_on:
+            - database
+        networks:
+            - network
+        ports:
+            - 8090:80
+    database:
+        image: microsoft/mssql-server-linux
+        container_name: architecture_database
+        restart: always
+        environment:
+            - ACCEPT_EULA=Y
+            - SA_PASSWORD=P4ssW0rd!
+        networks:
+            - network
+        ports:
+            - 1433:1433
+        volumes:
+            - database:/var/opt/mssql
+networks:
+    network:
+volumes:
+    database:

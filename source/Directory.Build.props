@@ -1,0 +1,6 @@
+<Project>
+    <PropertyGroup>
+        <LangVersion>latest</LangVersion>
+        <NeutralLanguage>en</NeutralLanguage>
+    </PropertyGroup>
+</Project>

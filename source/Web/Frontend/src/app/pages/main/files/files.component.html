@@ -1,0 +1,11 @@
+<h2>Files</h2>
+
+<app-file name="files" [(ngModel)]="files"></app-file>
+
+<div>
+    <h3>Files</h3>
+
+    <ul class="uk-list uk-list-bullet">
+        <li *ngFor="let file of files">{{ file | json }}</li>
+    </ul>
+</div>

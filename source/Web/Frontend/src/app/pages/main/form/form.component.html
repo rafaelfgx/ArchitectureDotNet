@@ -1,0 +1,26 @@
+<h2>Form</h2>
+
+<div class="uk-margin">
+    <app-button text="Set" (click)="set()"></app-button>
+    <app-button class="uk-margin-left" text="{{ disabled ? 'Enable' : 'Disable' }}" (click)="disabled = !disabled"></app-button>
+</div>
+
+<form [formGroup]="form">
+    <fieldset class="uk-fieldset" [disabled]="disabled">
+        <div class="uk-margin">
+            <app-label for="userId" text="User"></app-label>
+            <app-select-user formControlName="userId" [child]="post" text="User"></app-select-user>
+        </div>
+        <div class="uk-margin">
+            <app-label for="postId" text="Post"></app-label>
+            <app-select-post formControlName="postId" [child]="comment" #post text="Post"></app-select-post>
+        </div>
+        <div class="uk-margin">
+            <app-label for="commentId" text="Comment"></app-label>
+            <app-select-comment formControlName="commentId" #comment text="Comment"></app-select-comment>
+        </div>
+        <div class="uk-margin">
+            <pre>{{ this.form.value | json }}</pre>
+        </div>
+    </fieldset>
+</form>

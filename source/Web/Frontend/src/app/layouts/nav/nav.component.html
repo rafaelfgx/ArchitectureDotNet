@@ -1,0 +1,34 @@
+<div class="uk-card uk-card-default uk-card-body">
+    <ul class="uk-nav-default" uk-nav>
+        <li class="uk-margin-small" routerLinkActive="nav-active">
+            <a routerLink="/main/home">
+                <span uk-icon="icon: home"></span>
+                <span class="uk-margin-small-left">HOME</span>
+            </a>
+        </li>
+        <li class="uk-margin-small" routerLinkActive="nav-active">
+            <a routerLink="/main/list">
+                <span uk-icon="icon: list"></span>
+                <span class="uk-margin-small-left">LIST</span>
+            </a>
+        </li>
+        <li class="uk-margin-small" routerLinkActive="nav-active">
+            <a routerLink="/main/form">
+                <span uk-icon="icon: pencil"></span>
+                <span class="uk-margin-small-left">FORM</span>
+            </a>
+        </li>
+        <li class="uk-margin-small" routerLinkActive="nav-active">
+            <a routerLink="/main/files">
+                <span uk-icon="icon: file-text"></span>
+                <span class="uk-margin-small-left">FILES</span>
+            </a>
+        </li>
+        <li class="uk-margin-small">
+            <a (click)="signout()">
+                <span uk-icon="icon: sign-out"></span>
+                <span class="uk-margin-small-left">SIGN OUT</span>
+            </a>
+        </li>
+    </ul>
+</div>
